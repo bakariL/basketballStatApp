@@ -36,20 +36,28 @@ namespace ConsoleApp2_roster
             if (coach == "yes")
             {
                 //What is the Name of your team
-                Console.WriteLine("What is the name of your team/school?");
+                Console.WriteLine("What is the name of your team/school? this Tree is not looking like it should be looking");
                 string schoolName = Console.ReadLine();
 
                 //how many players on the team
-                Console.WriteLine("How many players are on the " + schoolName + "?");
-                int amountPlayers = int.Parse(Console.ReadLine());
-                string[] rosterTotal = new string[amountPlayers]; } //creates the amount of rosters spots
+                try
+                {
+
+
+                    Console.WriteLine("How many players are on the " + schoolName + "?");
+                    int amountPlayers = int.Parse(Console.ReadLine());
+                    string[] rosterTotal = new string[amountPlayers]; //creates the amount of rosters spots
                 int i;
-                string playerName = ""; 
+                string playerName = "";
+            }catch
+            {
+                throw new ExecutionEngineException();
+            }
 
                 while (playerName != "quit")
                 {
                     //Player 1, enter  name
-                    Console.WriteLine("Enter first and last name of roster spot #");
+                    Console.WriteLine("Enter first and last name of roster spot # but enter the whole file");
                     //rosterTotal[] = Console.ReadLine();
 
                     
